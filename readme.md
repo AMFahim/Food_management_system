@@ -1,4 +1,4 @@
-# Food Management System
+# AI-Powered Food Management and Sustainability Platform - Frontend
 
 This repository contains the source code for the **Food Management System**, a web application built using **Next.js v15** for a robust and scalable full-stack solution.
 
@@ -47,5 +47,7 @@ Start the application in development mode with hot-reloading:
 
 ```bash
 npm run dev
+
+```
 
 The application will now be running on http://localhost:3000 (or another port if configured).
