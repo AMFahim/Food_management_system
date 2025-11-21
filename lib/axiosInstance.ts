@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://ai-powered-food-management-sustaina.vercel.app/api",
+  baseURL: process.env.NEXT_PUBLIC_BASE_URL || "https://api.food.anasibnbelal.live/api",
   headers: {
     "Content-Type": "application/json",
   },
