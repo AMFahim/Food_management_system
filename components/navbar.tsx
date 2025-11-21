@@ -24,6 +24,7 @@ export function Navbar() {
     },
     exit: { opacity: 0, x: 300 },
   }
+  const isAuthenticated = localStorage.getItem("token") ? true : false;
 
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
@@ -51,12 +52,15 @@ export function Navbar() {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-3">
-          <button className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
+          {
+            !isAuthenticated &&  <Link href={"/login"} className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
             Sign In
-          </button>
-          <button className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-dark transition-all">
+          </Link>
+          }
+         
+          <Link href={isAuthenticated?"/dashboard":"/login"} className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-medium hover:bg-primary-dark transition-all">
             Get Started
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}

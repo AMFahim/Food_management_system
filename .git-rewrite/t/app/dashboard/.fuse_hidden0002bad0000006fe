@@ -24,7 +24,7 @@ const stats = [
   },
   {
     label: "Total Saved",
-    value: "₹2,450",
+    value: "৳2,450",
     icon: TrendingUp,
     color: "bg-purple-100 text-purple-700",
   },

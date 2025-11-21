@@ -34,7 +34,7 @@ export function Sidebar({ open, onToggle }: SidebarProps) {
             className="w-64 bg-sidebar border-r border-sidebar-border h-screen overflow-y-auto hidden md:block"
           >
             <div className="p-6 border-b border-sidebar-border">
-              <h1 className="text-2xl font-bold text-sidebar-primary">FreshKeep</h1>
+              <Link href={"/"} className="text-2xl font-bold text-sidebar-primary">FreshKeep</Link>
             </div>
             <nav className="p-4 space-y-2">
               {menuItems.map((item) => {

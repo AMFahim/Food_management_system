@@ -128,7 +128,7 @@ export default function ProfilePage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2">Budget Range (₹)</label>
+                    <label className="block text-sm font-medium mb-2">Budget Range (৳)</label>
                     <input
                       {...registerEdit("budget_range", { required: true })}
                       type="text"
@@ -178,7 +178,7 @@ export default function ProfilePage() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Budget Range</p>
-                    <p className="font-medium text-lg">₹{user.budget_range}</p>
+                    <p className="font-medium text-lg">৳{user.budget_range}</p>
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Household Size</p>
