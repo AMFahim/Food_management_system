@@ -1,4 +1,4 @@
-# AI-Powered Food Management and Sustainability Platform - Frontend
+# AI-Powered Food Management and Sustainability Platform - Frontend 
 
 This repository contains the source code for the **Food Management System**, a web application built using **Next.js v16** for a robust and scalable full-stack solution.
 
