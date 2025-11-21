@@ -1,6 +1,6 @@
 # AI-Powered Food Management and Sustainability Platform - Frontend
 
-This repository contains the source code for the **Food Management System**, a web application built using **Next.js v15** for a robust and scalable full-stack solution.
+This repository contains the source code for the **Food Management System**, a web application built using **Next.js v16** for a robust and scalable full-stack solution.
 
 ---
 
@@ -12,7 +12,7 @@ Follow these steps to set up and run the Food Management System locally on your 
 
 Ensure you have the following software installed:
 
-* **Node.js** (v18 or higher is generally recommended for Next.js)
+* **Node.js** (v20 or higher is generally recommended for Next.js)
 * **npm**, **Yarn**, or **pnpm** (npm is used in the examples below)
 * **Git**
 
