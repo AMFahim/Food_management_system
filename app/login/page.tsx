@@ -37,6 +37,7 @@ export default function LoginPage() {
       if (res.data.success) {
         router.push("/dashboard");
         localStorage.setItem("token", res.data.data.token);
+        localStorage.setItem("user", JSON.stringify(res.data.data.user) );
       }
     } catch (err) {
       console.log(err);
