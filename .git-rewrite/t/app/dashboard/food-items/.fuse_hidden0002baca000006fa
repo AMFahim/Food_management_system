@@ -156,7 +156,7 @@ export default function FoodItemsPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">Cost Per Unit (₹)</label>
+                      <label className="block text-sm font-medium mb-2">Cost Per Unit (৳)</label>
                       <input
                         {...register("cost_per_unit", { required: true })}
                         type="number"
@@ -212,7 +212,7 @@ export default function FoodItemsPage() {
                         </div>
                         <div>
                           <p className="text-muted-foreground">Cost Per Unit</p>
-                          <p className="font-medium">₹{item.cost_per_unit.toFixed(2)}</p>
+                          <p className="font-medium">৳{item.cost_per_unit.toFixed(2)}</p>
                         </div>
                         <div>
                           <p className="text-muted-foreground">Status</p>

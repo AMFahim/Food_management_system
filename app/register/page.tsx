@@ -7,6 +7,8 @@ import { Button } from "@/components/button"
 import { motion } from "framer-motion"
 import { UserPlus, AlertCircle } from "lucide-react"
 import Image from "next/image"
+import axiosInstance from "@/lib/axiosInstance"
+import { useRouter } from "next/navigation"
 
 interface RegisterFormInputs {
   full_name: string
@@ -22,6 +24,7 @@ interface RegisterFormInputs {
 }
 
 export default function RegisterPage() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -51,6 +54,8 @@ export default function RegisterPage() {
         setError("confirmPassword", {
           message: "Passwords do not match",
         })
+
+
         return
       }
 
@@ -67,11 +72,19 @@ export default function RegisterPage() {
         },
       }
 
-      console.log("[v0] Registration payload:", payload)
-      // Handle successful registration
+      const res = await axiosInstance.post("/auth/register", payload)
+      console.log(res)
+      if(res?.data.success){
+        router.push("/login")
+      } {
+        setError("root", {
+          message: res.response.data.message
+        })
+      }
+
     } catch (err) {
       setError("root", {
-        message: "An error occurred. Please try again.",
+        message: err.response.data.message,
       })
     }
   }
@@ -122,7 +135,6 @@ export default function RegisterPage() {
             transition={{ duration: 0.6 }}
             className="bg-card rounded-2xl p-8 md:p-10 border border-border shadow-lg backdrop-blur-sm bg-card/95"
           >
-            {/* Header */}
             <div className="text-center mb-8">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -247,8 +259,8 @@ export default function RegisterPage() {
                       className="w-full px-4 py-2.5 rounded-lg bg-background border border-input text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                     >
                       <option value="Individual">Individual</option>
-                      <option value="Business">Business</option>
-                      <option value="Organization">Organization</option>
+                      <option value="Family">Family</option>
+                      <option value="Community">Family</option>
                     </select>
                   </div>
                   <div>
